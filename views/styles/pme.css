@@ -1,0 +1,71 @@
+@import url('https://fonts.googleapis.com/css2?family=Nunito:wght@500&display=swap');
+
+.Vitae {
+  --bgc0: #29262d;
+  --bgc1: #373741;
+  --acc0: rgb(0 0 0 / 0.1);
+  --foc0: #FFFFFF;
+}
+
+.Droplet {
+  --bgc0: #f9fafe;
+  --bgc1: #FFFFFF;
+  --acc0: rgb(191 209 241 / 0.42);
+  --foc0: #081b4b;
+}
+
+.hide {
+	display: none;
+}
+
+body {
+  color: var(--foc0);
+  background-color: var(--bgc0);
+	font-family: 'Nunito', sans-serif;
+}
+
+button {
+	border: none;
+	background: none;
+}
+
+section#Hero {
+	padding: 30px 0 30px 0;
+	display: flex;
+	flex-direction: row;
+	justify-content: center;
+	align-items: center;
+}
+
+section#Hero > div {
+	padding-left: 30px;
+	display: flex;
+	flex-direction: column;
+}
+
+section#Hero > div > h1.Logo {
+	text-indent: 5;
+	line-height: 40px;
+	padding: 0;
+	margin: 0;
+	font-size: 50px;
+}
+
+section#Hero > div > h2 {
+	line-height: 30px;
+	padding: 0;
+	margin: 0;
+	font-size: 20px;
+}
+
+section#Hero > div > span {
+	line-height: 10px;
+	border-radius: 25px;
+}
+
+img.Sm {
+	width: 200px;
+	border-radius: 40px;
+  margin-top: 20px;
+}
+

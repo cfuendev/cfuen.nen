@@ -1,0 +1,168 @@
+button.Button.Text {
+	padding: 0;
+	background-color: var(--acc0);
+	border: none;
+	border-radius: 15px;
+  max-height: 60px;
+}
+
+button.Button.Text > div {
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	background-color: var(--bgc1);
+	padding: 15px;
+	margin-top: 20px;
+	border: none;
+	color: white;
+	border-radius: 10px;
+	transform: translate(0px, -25px);
+	transition-property: transform, filter;
+  transition-duration: 150ms;
+	transition-timing-function: cubic-bezier(0.18,0.89,0.32,1.27);
+}
+
+button.Button:hover > .Content {
+	transform: translate(0px, -20px);
+	transition-property: transform, filter;
+  transition-duration: 150ms;
+	transition-timing-function: cubic-bezier(0.18,0.89,0.32,1.27);
+}
+
+button.Button > .Img {
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	background-color: var(--bgc1);
+	padding: 20px;
+	margin-top: 20px;
+	border: none;
+	color: white;
+	border-radius: 25px;
+	min-height: 105px;
+	transform: translate(0px, -40px);
+	transition-property: transform, filter;
+  transition-duration: 150ms;
+	transition-timing-function: cubic-bezier(0.18,0.89,0.32,1.27);
+}
+
+button.Button:hover > .Img {
+	transform: translate(0px, -30px);
+	transition-property: transform, filter;
+  transition-duration: 150ms;
+	transition-timing-function: cubic-bezier(0.18,0.89,0.32,1.27);
+}
+
+.Bar {
+  background-color: var(--bgc1);
+  border-radius: 3px;
+  filter:
+    drop-shadow(0 3px 0px var(--acc0))
+    drop-shadow(0 0 1px var(--acc0));
+}
+
+header#Nav {
+  margin-top: 10px;
+  top: 0;
+  position: sticky;
+  display: flex;
+  justify-content: center;
+  padding: 0 10px 0 10px;
+  z-index: 1;
+  transition-property: padding;
+  transition: 300ms ease-out;
+}
+
+header#Nav.Scrolled {
+  transition-property: padding;
+  transition: 100ms ease-out;
+  padding: 0 !important;
+}
+
+header#Nav > div {
+  width: 100%;
+  display: flex;
+  flex-direction: row;
+  align-content: center;
+  padding: 10px 2rem 10px 2rem;
+}
+
+header#Nav > div > #Logo {
+  font-size: 2.5rem;
+}
+
+header#Nav > div > #Links {
+  min-width: 500px;
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-content: center;
+}
+
+header#Nav > div > #Links > a {
+  display: flex;
+  align-items: center;
+  margin-right: 5%;
+  text-decoration-line: none;
+  padding: 2px 5px 2px 6px;
+  border-radius: 3px;
+  color: var(--foc0);
+  font-size: 1.7rem;
+}
+
+header#Nav > div > #Links > a:hover {
+  transition-property: all;
+  transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
+  transition-duration: 200ms;
+  background-color: var(--acc0);
+}
+
+header#Nav > div > #Options {
+  display: flex;
+  flex-direction: row;
+  justify-content: end;
+  align-items: center;
+  width: 100%;
+}
+
+header#Nav > div > #Options button {
+  transition-property: all;
+  transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
+  transition-duration: 200ms;
+  padding: 8px;
+  display: grid;
+  place-content: center;
+  border-radius: 3px;
+}
+
+header#Nav > div > #Options button:hover {
+  cursor: pointer;
+  transition-property: all;
+  transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
+  transition-duration: 200ms;
+	background-color: var(--acc0);
+}
+
+header#Nav > div > #Options button:active {
+  cursor: pointer;
+  background-color: transparent;
+}
+
+.Tooltip > .Options {
+  position: absolute;
+  background-color: var(--bgc1);
+  transform: translateX(-20%);
+}
+
+.Tooltip > .Options > button {
+  width: 100%;
+}
+
+#Footer {
+  margin-top: 30px;
+  padding: 10px 20px;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  margin: 30px 10px 10px;
+}

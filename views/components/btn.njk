@@ -1,0 +1,7 @@
+{% macro btn(cont="Vacío", type="Text", action="console.log('Boton Vacío Presionado')") %}
+  <button class="Button {{ "Text" if type=="Text" else "Img"}}" onclick="{{action}}">
+    <div class="Content">
+      {{cont}}
+    </div>
+  </button>
+{% endmacro %}

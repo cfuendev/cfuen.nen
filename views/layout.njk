@@ -1,0 +1,20 @@
+{% import "components/nav.njk" as nav %}
+{% import "components/footer.njk" as footer %}
+
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>Juan Castillo!</title>
+        <link href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.4/css/bootstrap.min.css" rel="stylesheet">
+        <link href="/comp.css" rel="stylesheet">
+        <link href="/pme.css" rel="stylesheet"><script src="https://code.iconify.design/iconify-icon/1.0.2/iconify-icon.min.js"></script>
+    </head>
+    <body class="Droplet">
+        {{ nav.nav() }}
+    
+        {% block body %}
+        {% endblock %}
+    
+        {{ footer.footer(year) }}
+    </body>
+</html>

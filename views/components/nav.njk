@@ -1,0 +1,33 @@
+{% import 'components/tooltip.njk' as tooltip %}
+{% macro nav() %}
+<header id="Nav">
+  <div class="Bar">
+    <div id="Logo">
+      CFUEN
+    </div>
+    <nav id="Links">
+      <a href="/" class="unclickable">
+        Home
+      </a>
+      <a href="/contact" class="unclickable">
+        Contacto
+      </a>
+    </nav>
+    <div id="Options">
+      {% call tooltip.tooltip("Theme", [
+        {name: "Droplet", action: "themeSwitchTo('Droplet')"},
+        {name: "Vitae", action: "themeSwitchTo('Vitae')"}
+      ]) %}
+        <iconify-icon icon="ic:round-format-color-fill" style="color: var(--foc0);" width="24" height="24"></iconify-icon>
+      {% endcall %}
+    </div>
+  </div>
+</header>
+<script>
+  const themeSwitchTo = (theme) => {
+    document.body.classList.remove("Vitae")
+    document.body.classList.remove("Droplet")
+    document.body.classList.add(theme)
+  }
+</script>
+{% endmacro %}

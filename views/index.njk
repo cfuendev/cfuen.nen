@@ -1,0 +1,22 @@
+{% extends 'layout.njk' %}
+{% import 'components/btn.njk' as btn %}
+
+{% block body %}
+<div class="container">
+    <div class="row">
+        <div class="col-md-12">
+            {% block content %}
+                <section id="Hero">
+                    <img class="Sm" src="https://i.imgur.com/FdAI9DF.jpg"/>
+                    <div>
+                        <h1 class="Logo">Juan Castillo</h1>
+                        <h2>Desarrollador (Casi) Fullstack</h2>
+                        <span>Calidad Funcional y Estética</span>
+                        <!--{{ btn.btn("BOTÓN", "Text", "console.log('Hola Botón')") }}-->
+                    </div>
+</section>
+            {% endblock %}
+        </div>
+    </div>
+</div>
+{% endblock %}
