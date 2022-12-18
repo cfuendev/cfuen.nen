@@ -6,6 +6,10 @@ My Portfolio built on the NEN Stack:
 - Express.js
 - ??? (A secret, for now..)
 
+Extras:
+
+- Iconify
+
 Currently only has spanish
 
 # Fuentes

@@ -1,6 +1,7 @@
 {% macro tooltip(id, options=[{name: "Opción", action: ""}]) %}
 <div id="{{ id }}" class="Tooltip">
-  <button onclick="{{ id }}_toggle()">{{ caller() }}</button>
+  <button
+  onclick="{{ id }}_toggle()">{{ caller() }}</button>
   <div class="Options" class="Bar hide">
     {% for opt in options %}
       <button onclick="{{ opt.action }}">{{ opt.name }}</button>
@@ -9,5 +10,11 @@
 </div>
 <script>
   const {{ id }}_toggle = () => document.querySelector("#{{ id }} > .Options").classList.toggle("hide");
+  document.addEventListener("click", (event) => {
+    // If user clicks inside the element, do nothing
+    if (event.target.closest("#{{ id }}")) return
+    // If user clicks outside the element, hide it!
+    {{ id }}_toggle();
+  })
 </script>
 {% endmacro %}
