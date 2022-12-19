@@ -2,7 +2,7 @@
 <div id="{{ id }}" class="Tooltip">
   <button
   onclick="{{ id }}_toggle()">{{ caller() }}</button>
-  <div class="Options" class="Bar hide">
+  <div class="Options Bar hide">
     {% for opt in options %}
       <button onclick="{{ opt.action }}">{{ opt.name }}</button>
     {% endfor %}

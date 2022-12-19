@@ -5,6 +5,7 @@
   --bgc1: #373741;
   --acc0: rgb(0 0 0 / 0.1);
   --foc0: #FFFFFF;
+  --foc1: #fd8e8e;
 }
 
 .Droplet {
@@ -12,16 +13,30 @@
   --bgc1: #FFFFFF;
   --acc0: rgb(191 209 241 / 0.42);
   --foc0: #081b4b;
+  --foc1: rgba(98, 150, 240, 0.42);
 }
 
 .hide {
-	display: none;
+	transform: scaleY(0%);
+	transition-property: transform;
+  transition-duration: 150ms;
+	transition-timing-function: cubic-bezier(0.18,0.89,0.32,1.27);
 }
 
 body {
   color: var(--foc0);
   background-color: var(--bgc0);
 	font-family: 'Nunito', sans-serif;
+}
+
+::-moz-selection { /* Code for Firefox */
+	color: var(--bgc0);
+  background-color: var(--foc1)
+}
+
+::selection {
+	color: var(--bgc0);
+  background-color: var(--foc1)
 }
 
 button {

@@ -8,8 +8,19 @@
         <link href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.4/css/bootstrap.min.css" rel="stylesheet">
         <link href="/comp.css" rel="stylesheet">
         <link href="/pme.css" rel="stylesheet"><script src="https://code.iconify.design/iconify-icon/1.0.2/iconify-icon.min.js"></script>
+        <script defer>
+            window.onload = () => {
+                if (!localStorage.getItem("theme")) {
+                    if (window.matchMedia && window.matchMedia('(prefers-color-scheme: dark)').matches) {
+                        localStorage.setItem("theme", "Droplet")
+                    }
+                    else localStorage.setItem("theme", "Droplet")
+                }
+                document.body.classList.add(localStorage.getItem("theme"))
+            }
+        </script>
     </head>
-    <body class="Droplet">
+    <body class="">
         {{ nav.nav() }}
     
         {% block body %}
