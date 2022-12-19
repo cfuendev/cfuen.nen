@@ -14,7 +14,8 @@
     // If user clicks inside the element, do nothing
     if (event.target.closest("#{{ id }}")) return
     // If user clicks outside the element, hide it!
-    {{ id }}_toggle();
+    console.log("outside")
+    document.querySelector("#{{ id }} > .Options").classList.add("hide");
   })
 </script>
 {% endmacro %}
