@@ -1,31 +1,34 @@
 {% import "components/nav.njk" as nav %}
 {% import "components/footer.njk" as footer %}
-
 <!DOCTYPE html>
 <html>
     <head>
         <title>Juan Castillo!</title>
-        <link href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.4/css/bootstrap.min.css" rel="stylesheet">
+        <meta name="description"
+        content="Desarrollador de software, creador de contenido y amante de la web. Si tienes una idea, puedo hacerla realidad">
         <link href="/comp.css" rel="stylesheet">
-        <link href="/pme.css" rel="stylesheet"><script src="https://code.iconify.design/iconify-icon/1.0.2/iconify-icon.min.js"></script>
-        <script defer>
-            window.onload = () => {
-                if (!localStorage.getItem("theme")) {
+        <link href="/pme.css" rel="stylesheet">
+        {% block styles %}{% endblock %}
+        <script src="https://code.iconify.design/iconify-icon/1.0.2/iconify-icon.min.js"></script>
+        {% block scripts %}{% endblock %}
+        <script>
+            window.addEventListener('DOMContentLoaded', (event) => {
+                if (!localStorage.getItem("cfuendev-theme")) {
                     if (window.matchMedia && window.matchMedia('(prefers-color-scheme: dark)').matches) {
-                        localStorage.setItem("theme", "Droplet")
-                    }
-                    else localStorage.setItem("theme", "Droplet")
+                        localStorage.setItem("cfuendev-theme", "Vitae");
+                    } else { localStorage.setItem("cfuendev-theme", "Droplet"); }
+                    
                 }
-                document.body.classList.add(localStorage.getItem("theme"))
-            }
+                document
+                    .body
+                    .classList
+                    .add(localStorage.getItem("cfuendev-theme"))
+            });
         </script>
     </head>
     <body class="">
         {{ nav.nav() }}
-    
-        {% block body %}
-        {% endblock %}
-    
+        {% block body %}{% endblock %}
         {{ footer.footer(year) }}
     </body>
 </html>

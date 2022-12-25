@@ -1,0 +1,16 @@
+{
+	"version": "2.0.0",
+	"tasks": [
+		{
+			"type": "npm",
+			"script": "dev",
+			"problemMatcher": [],
+			"label": "Run Express Server",
+			"detail": "Run the Express server",
+			"group": {
+				"kind": "none",
+				"isDefault": true
+			}
+		}
+	]
+}

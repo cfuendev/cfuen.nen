@@ -1,5 +1,14 @@
 @import url('https://fonts.googleapis.com/css2?family=Nunito:wght@500&display=swap');
 
+:root {
+  --fss0: 14px;
+  --fss1: 17px;
+  --fss2: 20px;
+  --fsm0: 25px;
+  --fsx0: 35px;
+  --fsx1: 50px;
+}
+
 .Vitae {
   --bgc0: #29262d;
   --bgc1: #373741;
@@ -17,9 +26,9 @@
 }
 
 .hide {
-	transform: scaleY(0%);
+	transform: scaleY(0%) !important;
 	transition-property: transform;
-  transition-duration: 150ms;
+	transition-duration: 150ms;
 	transition-timing-function: cubic-bezier(0.18,0.89,0.32,1.27);
 }
 
@@ -29,19 +38,28 @@ body {
 	font-family: 'Nunito', sans-serif;
 }
 
-::-moz-selection { /* Code for Firefox */
-	color: var(--bgc0);
-  background-color: var(--foc1)
+::-moz-selection {
+  color: var(--bgc0);
+  background-color: var(--foc1);
 }
 
 ::selection {
-	color: var(--bgc0);
-  background-color: var(--foc1)
+  color: var(--bgc0);
+  background-color: var(--foc1);
+}
+
+#Logo {
+  font-size: var(--fsm0);
+	display: grid;
+  place-content: center;
 }
 
 button {
 	border: none;
 	background: none;
+	color: var(--foc0);
+	font-size: var(--fss1);
+	font-family: 'Nunito', sans-serif;
 }
 
 section#Hero {

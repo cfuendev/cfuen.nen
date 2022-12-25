@@ -22,10 +22,11 @@ app.get('/', function(req, res) {
 });
 
 // Other example
-app.get('/example', function(req, res) {
-    res.render('example.njk', {
-        page: 'example',
-        port: app.get('port')
+app.get('/contact', function(req, res) {
+    res.render('contact.njk', {
+        page: 'contact',
+        port: app.get('port'),
+        year: new Date().getFullYear()
     });
 });
 

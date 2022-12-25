@@ -1,11 +1,14 @@
 {% extends 'layout.njk' %}
 {% import 'components/btn.njk' as btn %}
 
+{% block styles %}
+    <link href="/home.css" rel="stylesheet">
+{% endblock %}
+
 {% block body %}
-<div class="container">
-    <div class="row">
-        <div class="col-md-12">
-            {% block content %}
+    <div class="container">
+        <div class="row">
+            <div class="col-md-12">
                 <section id="Hero">
                     <img class="Sm" src="https://i.imgur.com/FdAI9DF.jpg"/>
                     <div>
@@ -14,9 +17,35 @@
                         <span>Calidad Funcional y Estética</span>
                         <!--{{ btn.btn("BOTÓN", "Text", "console.log('Hola Botón')") }}-->
                     </div>
-</section>
-            {% endblock %}
+                </section>
+                <section id="UnHero" class="Bar">
+                    <section id="About">
+                        <h2>Sobre mí</h1>
+                        ¡Hola! Soy un desarrollador de software especializado en construir interfaces gráficas.
+                        Me especializo en crear plataformas web con tecnologías web, pues, pues soy un fiel creedor
+                        de que las plataformas de nueva generación más revolucionarias están siendo construidas gracias
+                        a la web.
+                    </section>
+                    <section id="Skills">
+                        <h2>Habilidades</h1>
+                        - Lenguajes Web (HTML5, CSS, JavaScript y TypeScript)
+                        - Librerías y Frameworks centrados en la construcción de interfaces (Angular, React, Svelte)
+                        - Librerías y Frameworks de Back-End
+                        - VCS
+                        - CI
+                    </section>
+                    <section id="Services">
+                        <h2>Servicios</h1>
+                        - Desarrollo de Aplicaciones (Páginas, Webapps, Consola)
+                        - Diseño de UI/UX (Web, Móvil, Escritorio)
+                        - Arquitectura de Aplicaciones
+                    </section>
+                    <section id="Contact">
+                        <h2>Contacto</h1>
+                        Me puedes contactar acá
+                    </section>
+                </section>
+            </div>
         </div>
     </div>
-</div>
 {% endblock %}
