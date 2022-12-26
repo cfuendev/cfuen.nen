@@ -4,7 +4,8 @@
   --fss0: 14px;
   --fss1: 17px;
   --fss2: 20px;
-  --fsm0: 25px;
+  --fsm0: 23px;
+  --fsm1: 25px;
   --fsx0: 35px;
   --fsx1: 50px;
 }
@@ -49,7 +50,7 @@ body {
 }
 
 #Logo {
-  font-size: var(--fsm0);
+  font-size: var(--fsm1);
 	display: grid;
   place-content: center;
 }

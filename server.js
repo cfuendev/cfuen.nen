@@ -11,6 +11,7 @@ nunjucks.configure('views', {
 
 app.set('port', process.env.PORT || 3000);
 app.use(express.static('./views/styles'))
+app.use(express.static('./views/static'))
 
 // Home page
 app.get('/', function(req, res) {

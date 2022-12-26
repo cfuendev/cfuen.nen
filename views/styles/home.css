@@ -1,5 +1,52 @@
 #UnHero > section {
     margin-top: 30px;
+    padding: 2rem 8rem;
     /* debug */
-    border: 1px dashed var(--foc0);
+    /* border: 1px dashed var(--foc0); */
+}
+
+#UnHero > section {
+    font-size: var(--fsm0);
+    display: flex;
+}
+
+#UnHero > section#About {
+    flex-direction: row;
+}
+
+#UnHero > section#Skills {
+    flex-direction: column;
+    justify-content: center;
+    text-align: center;
+}
+
+#UnHero > section#Skills .UnInfo {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+}
+
+#UnHero > section#Skills > .UnInfo > div > * {
+    max-width: 20%;
+}
+
+#UnHero > section > div.Info {
+    display: flex;
+    flex-direction: column;
+}
+
+#UnHero > section > div.Info:nth-child(even) {
+    text-align: end;
+}
+
+#UnHero > section > div.UnInfo {
+    display: grid;
+    place-content: center;
+}
+
+#UnHero > section#About > div {
+    width: 50%;
+}
+
+h2 {
+    font-size: var(--fsx0);
 }

@@ -12,6 +12,7 @@
         <script src="https://code.iconify.design/iconify-icon/1.0.2/iconify-icon.min.js"></script>
         {% block scripts %}{% endblock %}
         <script>
+            let theme;
             window.addEventListener('DOMContentLoaded', (event) => {
                 if (!localStorage.getItem("cfuendev-theme")) {
                     if (window.matchMedia && window.matchMedia('(prefers-color-scheme: dark)').matches) {
@@ -19,11 +20,18 @@
                     } else { localStorage.setItem("cfuendev-theme", "Droplet"); }
                     
                 }
+                theme = localStorage.getItem("cfuendev-theme");
                 document
                     .body
                     .classList
-                    .add(localStorage.getItem("cfuendev-theme"))
+                    .add(theme)
             });
+            window.addEventListener('load', (e) => {
+                document.querySelectorAll("img").forEach((elm)=>{
+                    elm.src = elm.src.replace(/(?<=-)\w*(?=.png)/, theme)
+                    console.log(elm.src.replace(/(?<=-)\w*(?=.png)/, theme))
+                })
+            })
         </script>
     </head>
     <body class="">

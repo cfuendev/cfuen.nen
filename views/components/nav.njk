@@ -29,6 +29,7 @@
     document.body.classList.remove("Droplet")
     document.body.classList.add(theme)
     localStorage.setItem('cfuendev-theme', theme);
+    document.querySelectorAll("img").forEach((elm)=>{elm.src = elm.src.replace(/(?<=-)\w*(?=.png)/, theme)})
   }
 </script>
 {% endmacro %}
